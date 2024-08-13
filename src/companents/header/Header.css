@@ -42,6 +42,24 @@
         border-top: none;
     }
 
+    .close {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row !important;
+        height: auto;
+        align-items: center;
+        padding: 0;
+        column-gap: 100px;
+        border-top: none;
+    }
+
+    .close ul {
+        flex-direction: row;
+        row-gap: 12px;
+    }
+
     .open ul {
         flex-direction: row;
         row-gap: 12px;
