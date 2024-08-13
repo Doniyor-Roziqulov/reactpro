@@ -1,0 +1,49 @@
+.open {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: absolute;
+    top: 97px;
+    left: 0;
+    background-color: #f1f5f9;
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-right: 100px;
+    z-index: 9;
+    padding-bottom: 15px;
+    transition: all 0.4s linear;
+    border-top: 1px solid black;
+}
+
+.open ul {
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.close {
+    position: absolute;
+    left: -600px;
+    padding-top: 15px;
+    padding-left: 60px;
+    padding-right: 100px;
+    z-index: 9;
+    padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .open {
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        height: auto;
+        align-items: center;
+        padding: 0;
+        column-gap: 100px;
+        border-top: none;
+    }
+
+    .open ul {
+        flex-direction: row;
+        row-gap: 12px;
+    }
+}
