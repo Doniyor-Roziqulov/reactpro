@@ -1,9 +1,12 @@
 import React from "react";
+import "./Admin.css";
 
 const CreateProduct = () => {
     return (
-        <div>
-            <h2>CreateProduct</h2>
+        <div className="w-full h-full create">
+            <h2 className="text-4xl text-center text-white pt-5">
+                CreateProduct
+            </h2>
         </div>
     );
 };

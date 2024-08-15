@@ -13,3 +13,7 @@
 .site-header .logo {
     border-bottom: 1px solid #f1f5f9;
 }
+
+.create-list .active {
+    color: #2b9395;
+}

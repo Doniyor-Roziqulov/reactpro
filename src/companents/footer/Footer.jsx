@@ -6,7 +6,11 @@ import { useLocation } from "react-router-dom";
 
 const Footer = () => {
     const { pathname } = useLocation();
-    if (pathname === "/account") {
+    if (
+        pathname === "/account" ||
+        pathname === "/admin/createproduct" ||
+        pathname === "/admin/manageproduct"
+    ) {
         return <></>;
     }
     return (

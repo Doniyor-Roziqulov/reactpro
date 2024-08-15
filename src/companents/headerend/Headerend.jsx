@@ -7,14 +7,18 @@ import { VscAccount } from "react-icons/vsc";
 
 const Headerend = () => {
     const { pathname } = useLocation();
-    if (pathname === "/account") {
+    if (
+        pathname === "/account" ||
+        pathname === "/admin/createproduct" ||
+        pathname === "/admin/manageproduct"
+    ) {
         return <></>;
     }
     return (
         <section className="py-5">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex items-center justify-between">
-                    <div className="border w-[640px] flex items-center rounded-full  shadow-inner pr-4 ">
+                    <div className="border w-[640px] items-center rounded-full  shadow-inner pr-4  hidden lg:flex">
                         <input
                             autoComplete="off"
                             className="w-full rounded-full py-4 bg-transparent pl-7"
