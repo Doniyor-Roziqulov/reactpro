@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import "./Header.css";
+import { useLocation } from "react-router-dom";
 
 const navbar = navbarlink?.map((e, index) => (
     <li key={index}>
@@ -19,6 +20,10 @@ const navbar = navbarlink?.map((e, index) => (
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { pathname } = useLocation();
+    if (pathname === "/account") {
+        return <></>;
+    }
     return (
         <header className="py-7 bg-slate-100 site-header relative">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">

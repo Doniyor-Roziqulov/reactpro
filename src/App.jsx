@@ -6,16 +6,29 @@ import Delivery from "./pages/delivery/Delivery";
 import Contact from "./pages/contact/Contact";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./pages/not-found/NotFound";
+import Detail from "./pages/detail/Detail";
+import Admin from "./pages/admin/Admin";
+import CreateProduct from "./pages/admin/CreateProduct";
+import ManageProduct from "./pages/admin/ManageProduct";
+import Headerend from "./companents/headerend/Headerend";
+import Login from "./pages/login/Login";
 
 function App() {
     return (
         <>
             <Header />
+            <Headerend />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/delivery" element={<Delivery />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/product/:proId" element={<Detail />} />
+                <Route path="/admin" element={<Admin />}>
+                    <Route path="createproduct" element={<CreateProduct />} />
+                    <Route path="manageproduct" element={<ManageProduct />} />
+                </Route>
+                <Route path="/account" element={<Login />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

@@ -1,8 +1,14 @@
 import React from "react";
 import logo from "../../images/logo.svg";
 import instagram from "../../images/instagram.svg";
+import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+    const { pathname } = useLocation();
+    if (pathname === "/account") {
+        return <></>;
+    }
     return (
         <footer className="pt-12 pb-14 bg-slate-50">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
@@ -32,13 +38,15 @@ const Footer = () => {
                             Меню
                         </strong>
                         <p className="text-slate-400 mb-5">
-                            <a className="text-black text-sm" href="#">
+                            <NavLink className="text-black text-sm" to={"/"}>
                                 Главная{" "}
-                            </a>{" "}
+                            </NavLink>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <NavLink
+                                className="text-black text-sm"
+                                to={"/catalog"}>
                                 Каталог{" "}
-                            </a>
+                            </NavLink>
                             |{" "}
                             <a className="text-black text-sm" href="#">
                                 Товары в наличии
@@ -58,22 +66,26 @@ const Footer = () => {
                             </a>
                         </p>
                         <p className="text-slate-400 mb-5">
-                            <a className="text-black text-sm" href="#">
+                            <NavLink
+                                className="text-black text-sm"
+                                to={"/delivery"}>
                                 Доставка
-                            </a>{" "}
+                            </NavLink>{" "}
                             |{" "}
                             <a className="text-black text-sm" href="#">
                                 Услуги{" "}
                             </a>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <NavLink className="text-black text-sm" to={"*"}>
                                 Условия
-                            </a>
+                            </NavLink>
                         </p>
                         <p className="text-slate-400 mb-5">
-                            <a className="text-black text-sm" href="#">
+                            <NavLink
+                                className="text-black text-sm"
+                                to={"/contact"}>
                                 Контакты
-                            </a>{" "}
+                            </NavLink>{" "}
                             |{" "}
                             <a className="text-black text-sm" href="#">
                                 Вставить{" "}

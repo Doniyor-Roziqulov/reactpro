@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { PiSmileySad } from "react-icons/pi";
 
 const NotFound = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <section className="py-4 lg:pb-11 bg-slate-200">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0 ">

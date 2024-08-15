@@ -3,6 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { BsCartPlus } from "react-icons/bs";
 import axios from "axios";
 import "./Popular.css";
+import { Link } from "react-router-dom";
 
 const API_URl = "https://dummyjson.com";
 
@@ -50,15 +51,19 @@ const Popular = () => {
         <li
             className="good__item sm:w-72 relative pt-3 pb-16 border border-white transition-all rounded-3xl hover:bg-slate-50 hover:border hover:border-slate-200"
             key={item.id}>
-            <img
-                className="w-full h-40 sm:h-56 object-contain"
-                src={item.images[0]}
-                alt=""
-            />
+            <Link to={`/product/${item.id}`}>
+                <img
+                    className="w-full h-40 sm:h-56 object-contain"
+                    src={item.images[0]}
+                    alt={item.title}
+                />
+            </Link>
             <div className="px-3">
-                <h3 className="mb-2 text-ellipsis overflow-hidden whitespace-nowrap max-w-full text-sm md:text-lg">
-                    {item.title}
-                </h3>
+                <Link to={`/product/${item.id}`}>
+                    <h3 className="mb-2 text-ellipsis overflow-hidden whitespace-nowrap max-w-full text-sm md:text-lg">
+                        {item.title}
+                    </h3>
+                </Link>
                 <p
                     title={item.description}
                     className="text-xs md:text-base text-ellipsis overflow-hidden whitespace-nowrap max-w-full">
