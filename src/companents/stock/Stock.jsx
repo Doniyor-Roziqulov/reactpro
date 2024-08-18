@@ -70,30 +70,30 @@ const Stock = () => {
     ));
 
     return (
-        <section className="pb-16">
+        <section className="pb-16 dark:bg-zinc-900">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex items-center gap-x-1 sm:gap-x-3 mb-9">
-                    <h2 className="text-xl font-bold sm:text-3xl">
+                    <h2 className="text-xl font-bold sm:text-3xl dark:text-white">
                         Товары в наличии
                     </h2>
-                    <a href="#" className="text-sm font-normal">
+                    <a href="#" className="text-sm font-normal dark:text-white">
                         Все товары в категории
                     </a>
-                    <FaArrowRightLong />
+                    <FaArrowRightLong className="dark:text-white" />
                 </div>
                 <div className="flex flex-col gap-x-4 md:flex-row">
                     <select
-                        className="border py-2 w-60 md:w-80 px-4 mb-4 rounded-3xl shadow-inner bg-slate-50 font-semibold "
+                        className="border py-2 w-60 md:w-80 px-4 mb-4 rounded-3xl shadow-inner bg-slate-50 dark:bg-neutral-900 dark:text-white font-semibold "
                         value={selectCategory}
                         onChange={(e) => setSelectCategory(e.target.value)}>
                         <option value="">All</option>
                         {categoryItem}
                     </select>
                     <div className="relative">
-                        <div className="flex items-center justify-between border  w-60 md:w-80 mb-4 rounded-3xl shadow-inner bg-slate-50 font-semibold relative">
+                        <div className="flex items-center justify-between border  w-60 md:w-80 mb-4 rounded-3xl shadow-inner bg-slate-50 dark:bg-neutral-900 font-semibold relative">
                             <input
                                 onChange={(e) => searchForm(e.target.value)}
-                                className="w-full py-2 bg-slate-50 rounded-3xl pl-7 pr-3 shadow-inner"
+                                className="w-full py-2 bg-slate-50  dark:bg-neutral-900 dark:text-white rounded-3xl pl-7 pr-3 shadow-inner"
                                 autoComplete="off"
                                 type="search"
                                 name="search"
@@ -122,7 +122,7 @@ const Stock = () => {
                 {limit * offset <= total && (
                     <button
                         onClick={() => setOffset((p) => p + 1)}
-                        className="py-2 px-10 mt-3 rounded-3xl bg-yellow-500 text-white block mx-auto transition-all hover:opacity-60">
+                        className="py-2 px-10 mt-3 rounded-3xl bg-yellow-500 dark:bg-yellow-700 dark:text-black text-white block mx-auto transition-all hover:opacity-60">
                         See more
                     </button>
                 )}

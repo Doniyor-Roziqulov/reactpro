@@ -4,7 +4,7 @@ import kuryer from "../../images/kuryer.png";
 
 const Shop = () => {
     return (
-        <section className="pt-6 mb-8">
+        <section className="pt-6 pb-8 dark:bg-zinc-900 dark:text-white">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex flex-col justify-between items-start mb-4 min-[800px]:flex-row">
                     <div className="w-full min-[800px]:w-50% min-[1240px]:w-[45%]">

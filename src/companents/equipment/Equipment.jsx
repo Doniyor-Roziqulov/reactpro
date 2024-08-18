@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const lists = equlist?.map((e, inx) => (
     <li
-        className="border border-white hover:border hover:border-slate-300 transition-all rounded-lg w-36 min-[430px]:w-48 min-[530px]:w-56 min-[620px]:w-72 min-[700px]:w-[302px]"
+        className="border border-white dark:border-slate-800 hover:border hover:border-slate-300 transition-all rounded-lg w-36 min-[430px]:w-48 min-[530px]:w-56 min-[620px]:w-72 min-[700px]:w-[302px]"
         key={inx}>
         <img className="w-full" src={e.img} alt={e.title} />
         <div className="pl-2 w-28 min-[430px]:w-36 min-[530px]:w-44 min-[620px]:w-56 min-[700px]:w-[240px]">
@@ -38,7 +38,7 @@ const lists = equlist?.map((e, inx) => (
 
 const Equipment = () => {
     return (
-        <section className="pt-5 pb-10">
+        <section className="pt-5 pb-10 dark:bg-zinc-900 dark:text-white">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <h1 className="text-2xl font-bold mb-10 min-[700px]:text-4xl">
                     Каталог

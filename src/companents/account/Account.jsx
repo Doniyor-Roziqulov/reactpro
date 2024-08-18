@@ -14,11 +14,11 @@ const Account = () => {
 
     const navigate = useNavigate();
     return (
-        <section>
+        <section className="dark:bg-zinc-900">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex justify-center items-center h-screen">
                     <div className="flex w-full flex-col items-center max-w-[450px] mx-auto my-auto border-2 py-2 rounded-xl px-2">
-                        <h2 className="text-2xl md:text-4xl font-bold mb-32">
+                        <h2 className="text-2xl md:text-4xl font-bold mb-32 dark:text-white">
                             Личный кабинет
                         </h2>
                         <form
@@ -27,18 +27,18 @@ const Account = () => {
                             <input
                                 required
                                 type="text"
-                                className="rounded-full py-3 pl-5 shadow-inner border w-full"
+                                className="rounded-full py-3 pl-5 shadow-inner border w-full dark:bg-neutral-900"
                                 placeholder="Usurname"
                             />
                             <input
                                 required
                                 type="password"
-                                className="rounded-full py-3 pl-5 shadow-inner border w-full"
+                                className="rounded-full py-3 pl-5 shadow-inner border w-full dark:bg-neutral-900"
                                 placeholder="Пароль"
                             />
                             <button
                                 onClick={handleClick}
-                                className="text-white py-3 w-full rounded-full bg-yellow-600">
+                                className="text-white py-3 w-full rounded-full bg-yellow-600 dark:text-black">
                                 Сохранить
                             </button>
                         </form>
@@ -47,17 +47,17 @@ const Account = () => {
                                 Выход
                             </a>
                         </div>
-                        <p className="text-lg font-bold">
+                        <p className="text-lg font-bold dark:text-white">
                             Мы в социальных сетях!
                         </p>
                         <div className="flex gap-x-5">
                             <button
-                                className="py-2 px-4 rounded-3xl bg-gray-500 border text-white"
+                                className="py-2 px-4 rounded-3xl bg-gray-500 border text-white dark:bg-neutral-900"
                                 onClick={() => navigate("/")}>
                                 Go Home
                             </button>
                             <button
-                                className="py-2 px-4 rounded-3xl bg-gray-500 border text-white"
+                                className="py-2 px-4 rounded-3xl bg-gray-500 border text-white dark:bg-neutral-900"
                                 onClick={() => navigate(-1)}>
                                 Go Back
                             </button>

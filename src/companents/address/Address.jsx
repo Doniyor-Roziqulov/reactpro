@@ -6,7 +6,7 @@ import men3 from "../../images/men3.png";
 
 const Address = () => {
     return (
-        <section className="pt-6">
+        <section className="pt-6 dark:bg-zinc-900 dark:text-white">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex flex-col min-[1000px]:flex-row">
                     <div>

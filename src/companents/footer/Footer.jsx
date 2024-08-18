@@ -14,7 +14,7 @@ const Footer = () => {
         return <></>;
     }
     return (
-        <footer className="pt-12 pb-14 bg-slate-50">
+        <footer className="pt-12 pb-14 bg-slate-50 dark:bg-zinc-800 dark:text-white">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <a href="/">
                     <img src={logo} alt="logo" />
@@ -24,16 +24,16 @@ const Footer = () => {
                         <strong className="text-lg font-bold mb-5 block">
                             Информация
                         </strong>
-                        <p className="text-black text-sm mb-5">
+                        <p className="text-black text-sm mb-5 dark:text-white">
                             Все права защищены © 2015 <br /> интернет-магазин
                             AIKEA.BY <br /> Беларусь.
                         </p>
-                        <p className="text-black text-sm mb-5">
+                        <p className="text-black text-sm mb-5 dark:text-white">
                             УНП 191828159 ИП Парейко В.С., <br />{" "}
                             регистрационный номер в <br /> торговом реестре
                             158299
                         </p>
-                        <p className="text-black text-sm border-b inline-block border-black">
+                        <p className="text-black text-sm border-b inline-block border-black dark:text-white">
                             Политика конфиденциальности
                         </p>
                     </div>
@@ -42,73 +42,97 @@ const Footer = () => {
                             Меню
                         </strong>
                         <p className="text-slate-400 mb-5">
-                            <NavLink className="text-black text-sm" to={"/"}>
+                            <NavLink
+                                className="text-black text-sm dark:text-white"
+                                to={"/"}>
                                 Главная{" "}
                             </NavLink>{" "}
                             |{" "}
                             <NavLink
-                                className="text-black text-sm"
+                                className="text-black text-sm dark:text-white"
                                 to={"/catalog"}>
                                 Каталог{" "}
                             </NavLink>
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Товары в наличии
                             </a>
                         </p>
                         <p className="text-slate-400 mb-5">
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Скидки{" "}
                             </a>{" "}
                             |
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Популярное{" "}
                             </a>{" "}
                             |
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Вдохновение{" "}
                             </a>
                         </p>
                         <p className="text-slate-400 mb-5">
                             <NavLink
-                                className="text-black text-sm"
+                                className="text-black text-sm dark:text-white"
                                 to={"/delivery"}>
                                 Доставка
                             </NavLink>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Услуги{" "}
                             </a>{" "}
                             |{" "}
-                            <NavLink className="text-black text-sm" to={"*"}>
+                            <NavLink
+                                className="text-black text-sm dark:text-white"
+                                to={"*"}>
                                 Условия
                             </NavLink>
                         </p>
                         <p className="text-slate-400 mb-5">
                             <NavLink
-                                className="text-black text-sm"
+                                className="text-black text-sm dark:text-white"
                                 to={"/contact"}>
                                 Контакты
                             </NavLink>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Вставить{" "}
                             </a>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Cписок покупок
                             </a>
                         </p>
                         <p className="text-slate-400">
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Корзина
                             </a>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Личный кабинет{" "}
                             </a>{" "}
                             |{" "}
-                            <a className="text-black text-sm" href="#">
+                            <a
+                                className="text-black text-sm dark:text-white"
+                                href="#">
                                 Избранное
                             </a>
                         </p>

@@ -30,15 +30,19 @@ const Goods = () => {
     }, [offset]);
 
     return (
-        <section className="pb-16">
+        <section className="pb-16 dark:bg-zinc-900">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex items-center gap-x-2 mb-9">
-                    <h2 className="text-xl font-bold sm:text-3xl">Скидки </h2>
+                    <h2 className="text-xl font-bold sm:text-3xl dark:text-white">
+                        Скидки{" "}
+                    </h2>
                     <PiPercentBold className="text-4xl text-red-500" />
-                    <a href="#" className="text-sm font-normal sm:text-base">
+                    <a
+                        href="#"
+                        className="text-sm font-normal sm:text-base dark:text-white">
                         Все товары в категории
                     </a>
-                    <FaArrowRightLong />
+                    <FaArrowRightLong className="dark:text-white" />
                 </div>
                 <Cart products={products} />
                 {loading && <Loading />}
@@ -46,7 +50,7 @@ const Goods = () => {
                 {limit * offset <= total && (
                     <button
                         onClick={() => setOffset((p) => p + 1)}
-                        className="py-2 px-10 mt-3 rounded-3xl bg-yellow-500 text-white block mx-auto transition-all hover:opacity-60">
+                        className="py-2 px-10 mt-3 rounded-3xl bg-yellow-500 dark:bg-yellow-700 text-white dark:text-black block mx-auto transition-all hover:opacity-60">
                         See more
                     </button>
                 )}

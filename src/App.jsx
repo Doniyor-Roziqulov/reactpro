@@ -13,11 +13,17 @@ import ManageProduct from "./pages/admin/ManageProduct";
 import Headerend from "./companents/headerend/Headerend";
 import Login from "./pages/login/Login";
 import Auth from "./pages/auth/Auth";
-import { memo } from "react";
+import { memo, useState } from "react";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 function App() {
+    const [darkMode, setDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+    };
     return (
-        <>
+        <div className={`${darkMode && "dark"}`}>
             <Header />
             <Headerend />
             <Routes>
@@ -42,7 +48,16 @@ function App() {
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-        </>
+            <button
+                onClick={toggleDarkMode}
+                className="fixed flex items-center justify-center w-12 h-12 bottom-16 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black">
+                {darkMode ? (
+                    <FiSun className="text-xl" />
+                ) : (
+                    <FiMoon className="text-xl" />
+                )}
+            </button>
+        </div>
     );
 }
 

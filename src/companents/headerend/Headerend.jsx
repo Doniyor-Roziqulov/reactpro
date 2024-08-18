@@ -15,7 +15,7 @@ const Headerend = () => {
         return <></>;
     }
     return (
-        <section className="py-5">
+        <section className="py-5 dark:bg-zinc-900">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex items-center justify-between">
                     <div className="border w-[640px] items-center rounded-full  shadow-inner pr-4  hidden lg:flex">
@@ -33,13 +33,13 @@ const Headerend = () => {
                     </a>
                     <div className="flex items-center gap-x-8">
                         <NavLink>
-                            <IoIosStarOutline className="text-2xl text-slate-700" />
+                            <IoIosStarOutline className="text-2xl text-slate-700 dark:text-slate-400" />
                         </NavLink>
                         <NavLink>
-                            <HiOutlineShoppingCart className="text-2xl text-slate-700" />
+                            <HiOutlineShoppingCart className="text-2xl text-slate-700 dark:text-slate-400" />
                         </NavLink>
                         <NavLink to={"/account"}>
-                            <VscAccount className="text-2xl text-slate-700" />
+                            <VscAccount className="text-2xl text-slate-700 dark:text-slate-400" />
                         </NavLink>
                     </div>
                 </div>
