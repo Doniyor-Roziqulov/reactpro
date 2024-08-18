@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { equlist } from "../../static";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -51,4 +51,4 @@ const Equipment = () => {
     );
 };
 
-export default Equipment;
+export default memo(Equipment);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Admin.css";
 
 const CreateProduct = () => {
@@ -11,4 +11,4 @@ const CreateProduct = () => {
     );
 };
 
-export default CreateProduct;
+export default memo(CreateProduct);

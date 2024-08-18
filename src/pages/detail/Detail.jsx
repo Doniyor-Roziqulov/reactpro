@@ -1,34 +1,36 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import axios from "../../api";
+import React, { memo, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const API_URl = "https://dummyjson.com";
 import { GrAdd } from "react-icons/gr";
 import star from "../../images/star.svg";
 import drame from "../../images/drame.svg";
+import Cart from "../../companents/cart/Cart";
 
 const Detail = () => {
     const { proId } = useParams();
+    const [products, setProducts] = useState(null);
     const [data, setData] = useState(null);
     const [image, setImage] = useState(0);
     const [inc, setInc] = useState(1);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+    }, [proId]);
 
     useEffect(() => {
         axios
-            .get(`${API_URl}/products/${proId}`)
+            .get(`/products/${proId}`)
             .then((res) => setData(res.data))
             .catch((err) => console.log(err));
-    }, []);
-
+    }, [proId]);
     useEffect(() => {
         axios
-            .get(`${API_URl}/products/category-list`)
-            .then((res) => console.log(res.data))
+            .get(`/products/category/${data?.category}`, {
+                params: { limit: 4 },
+            })
+            .then((res) => setProducts(res.data.products))
             .catch((err) => console.log(err));
-    }, []);
+    }, [data, proId]);
 
     return (
         <section className="pt-7 pb-14">
@@ -46,7 +48,7 @@ const Detail = () => {
                                     <img
                                         onClick={(e) => setImage(inx)}
                                         key={inx}
-                                        className="w-20 h-20 object-contain bg-slate-100 border border-slate-300 cursor-pointer"
+                                        className="w-20 h-20 object-contain bg-slate-100 border border-slate-300 cursor-pointer hover:border-red-300"
                                         src={item}
                                         alt="image"
                                     />
@@ -71,7 +73,8 @@ const Detail = () => {
                         <div className="flex items-end gap-x-2 lg:gap-x-28 mb-3">
                             <div className="flex items-end gap-x-2">
                                 <p className="text-3xl font-bold">
-                                    {data?.price}
+                                    {Math.floor(data?.price * inc * 10000) /
+                                        10000}
                                 </p>
                                 <p className="font-bold">Br</p>
                             </div>
@@ -106,9 +109,10 @@ const Detail = () => {
                         </div>
                     </div>
                 </div>
+                <Cart products={products} />
             </div>
         </section>
     );
 };
 
-export default Detail;
+export default memo(Detail);

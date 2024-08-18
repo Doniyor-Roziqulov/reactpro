@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { catlist } from "../../static";
 
@@ -34,4 +34,4 @@ const Catigory = () => {
     );
 };
 
-export default Catigory;
+export default memo(Catigory);

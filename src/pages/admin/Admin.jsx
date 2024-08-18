@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { GoFileDirectory } from "react-icons/go";
 import { IoCreateOutline } from "react-icons/io5";
@@ -30,4 +30,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default memo(Admin);

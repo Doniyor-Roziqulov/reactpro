@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { PiSmileySad } from "react-icons/pi";
 
 const NotFound = () => {
@@ -18,4 +18,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default memo(NotFound);

@@ -12,6 +12,8 @@ import CreateProduct from "./pages/admin/CreateProduct";
 import ManageProduct from "./pages/admin/ManageProduct";
 import Headerend from "./companents/headerend/Headerend";
 import Login from "./pages/login/Login";
+import Auth from "./pages/auth/Auth";
+import { memo } from "react";
 
 function App() {
     return (
@@ -24,9 +26,17 @@ function App() {
                 <Route path="/delivery" element={<Delivery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/product/:proId" element={<Detail />} />
-                <Route path="/admin" element={<Admin />}>
-                    <Route path="createproduct" element={<CreateProduct />} />
-                    <Route path="manageproduct" element={<ManageProduct />} />
+                <Route path="/" element={<Auth />}>
+                    <Route path="admin" element={<Admin />}>
+                        <Route
+                            path="createproduct"
+                            element={<CreateProduct />}
+                        />
+                        <Route
+                            path="manageproduct"
+                            element={<ManageProduct />}
+                        />
+                    </Route>
                 </Route>
                 <Route path="/account" element={<Login />} />
                 <Route path="*" element={<NotFound />} />
@@ -36,4 +46,4 @@ function App() {
     );
 }
 
-export default App;
+export default memo(App);

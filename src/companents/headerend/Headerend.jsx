@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FiSearch } from "react-icons/fi";
 import { NavLink, useLocation } from "react-router-dom";
 import { IoIosStarOutline } from "react-icons/io";
@@ -48,4 +48,4 @@ const Headerend = () => {
     );
 };
 
-export default Headerend;
+export default memo(Headerend);

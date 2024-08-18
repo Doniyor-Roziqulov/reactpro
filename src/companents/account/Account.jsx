@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { memo, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Account = () => {
     useEffect(() => {
@@ -69,4 +69,4 @@ const Account = () => {
     );
 };
 
-export default Account;
+export default memo(Account);

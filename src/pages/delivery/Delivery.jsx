@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import Shop from "../../companents/shop/Shop";
 
 const Delivery = () => {
@@ -12,4 +12,4 @@ const Delivery = () => {
     );
 };
 
-export default Delivery;
+export default memo(Delivery);

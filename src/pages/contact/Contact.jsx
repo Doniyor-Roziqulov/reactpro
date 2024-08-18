@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import Address from "../../companents/address/Address";
 
 const Contact = () => {
@@ -12,4 +12,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default memo(Contact);

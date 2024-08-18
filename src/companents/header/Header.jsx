@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { navbarlink } from "../../static";
 import logo from "../../images/logo.svg";
 import { NavLink } from "react-router-dom";
@@ -71,4 +71,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default memo(Header);
