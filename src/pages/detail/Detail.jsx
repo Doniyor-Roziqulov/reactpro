@@ -33,13 +33,13 @@ const Detail = () => {
     }, [data, proId]);
 
     return (
-        <section className="pt-7 pb-14">
+        <section className="pt-7 pb-14 dark:bg-zinc-900 dark:text-white">
             <div className="container  max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex flex-col items-center justify-between gap-y-3 sm:flex-row sm:items-start gap-x-3">
                     <div className="w-11/12">
-                        <div className="sticky top-0 left-0">
+                        <div className="sticky top-0 left-0 mb-4">
                             <img
-                                className="lg:w-[500px] lg:h-[500px] object-contain bg-slate-100 border border-slate-300"
+                                className="lg:w-[500px] lg:h-[500px] object-contain bg-slate-100 dark:bg-neutral-800 border border-slate-300"
                                 src={data?.images[`${image}`]}
                                 alt={data?.title}
                             />
@@ -48,7 +48,7 @@ const Detail = () => {
                                     <img
                                         onClick={(e) => setImage(inx)}
                                         key={inx}
-                                        className="w-20 h-20 object-contain bg-slate-100 border border-slate-300 cursor-pointer hover:border-red-300"
+                                        className="w-20 h-20 object-contain dark:bg-neutral-800 bg-slate-100 border border-slate-300 cursor-pointer hover:border-red-300"
                                         src={item}
                                         alt="image"
                                     />
