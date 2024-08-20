@@ -11,10 +11,31 @@
     border-bottom: 1px solid #2b9395;
 }
 
+.dark .site-header .active {
+    color: #2b9395;
+    border-bottom: 1px solid #2b9395;
+}
+
 .site-header .logo {
     border-bottom: 1px solid #f1f5f9;
 }
 
+.dark .site-header .logo {
+    border-bottom: 1px solid #262626;
+}
+
 .create-list .active {
     color: #2b9395;
+}
+
+.logo__imgwhite {
+    display: none;
+}
+
+.dark .logo__imgwhite {
+    display: block;
+}
+
+.dark .logo__img {
+    display: none;
 }

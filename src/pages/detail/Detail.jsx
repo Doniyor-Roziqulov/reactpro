@@ -39,7 +39,7 @@ const Detail = () => {
                     <div className="w-11/12">
                         <div className="sticky top-0 left-0 mb-4">
                             <img
-                                className="lg:w-[500px] lg:h-[500px] object-contain bg-slate-100 dark:bg-neutral-800 border border-slate-300"
+                                className="w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] object-contain bg-slate-100 dark:bg-neutral-800 border border-slate-300"
                                 src={data?.images[`${image}`]}
                                 alt={data?.title}
                             />

@@ -14,6 +14,13 @@
     transition: all 0.4s linear;
     border-top: 1px solid black;
 }
+.dark .open {
+    background-color: #262626;
+}
+
+.dark .close {
+    background-color: #262626;
+}
 
 .open ul {
     flex-direction: column;

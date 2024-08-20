@@ -1,6 +1,6 @@
 .good__box {
-    opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
+    bottom: -60px;
 }
 
 .good__item {
@@ -44,5 +44,5 @@
 }
 
 .good__item:hover .good__box {
-    opacity: 1;
+    bottom: 10px;
 }

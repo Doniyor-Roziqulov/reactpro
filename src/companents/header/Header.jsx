@@ -21,6 +21,7 @@ const navbar = navbarlink?.map((e, index) => (
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+
     const { pathname } = useLocation();
     if (pathname === "/account") {
         return <></>;
@@ -30,7 +31,12 @@ const Header = () => {
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <div className="flex items-center justify-between">
                     <NavLink className="logo" to={"/"}>
-                        <img src={logo} alt="logo" />
+                        <img className="logo__img" src={logo} alt="logo" />
+                        <img
+                            className="logo__imgwhite"
+                            src={logowhite}
+                            alt="logo"
+                        />
                     </NavLink>
                     <div className={menuOpen ? "open" : "close"}>
                         <nav>
@@ -61,9 +67,9 @@ const Header = () => {
                         }}
                         className="lg:hidden">
                         {menuOpen ? (
-                            <IoClose className="text-2xl" />
+                            <IoClose className="text-2xl dark:text-white" />
                         ) : (
-                            <RxHamburgerMenu className="text-2xl" />
+                            <RxHamburgerMenu className="text-2xl dark:text-white" />
                         )}
                     </button>
                 </div>

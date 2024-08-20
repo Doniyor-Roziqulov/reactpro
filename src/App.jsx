@@ -15,6 +15,7 @@ import Login from "./pages/login/Login";
 import Auth from "./pages/auth/Auth";
 import { memo, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import Wishlist from "./pages/wishlist/Wishlist";
 
 function App() {
     const [darkMode, setDarkMode] = useState(false);
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/delivery" element={<Delivery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/product/:proId" element={<Detail />} />
+                <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/" element={<Auth />}>
                     <Route path="admin" element={<Admin />}>
                         <Route

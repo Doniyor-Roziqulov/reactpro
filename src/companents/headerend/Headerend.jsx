@@ -32,7 +32,7 @@ const Headerend = () => {
                         Вставить список покупок
                     </a>
                     <div className="flex items-center gap-x-8">
-                        <NavLink>
+                        <NavLink to={"/wishlist"}>
                             <IoIosStarOutline className="text-2xl text-slate-700 dark:text-slate-400" />
                         </NavLink>
                         <NavLink>

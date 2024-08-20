@@ -1,13 +1,16 @@
 import React, { memo } from "react";
 import { BsCartPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../context";
+import { FaRegStar } from "react-icons/fa6";
 
 const CartWrapper = ({ item }) => {
+    const [_, dispatch] = useStateValue();
     return (
-        <li className="good__item sm:w-72 relative pt-3 pb-16 border border-white transition-all rounded-3xl hover:bg-slate-50 hover:border hover:border-slate-200 dark:hover:bg-neutral-800 dark:border-neutral-700">
+        <li className="good__item sm:w-72 relative pt-3 pb-8 border border-white transition-all rounded-3xl overflow-hidden hover:bg-slate-50 hover:border hover:border-slate-200 dark:hover:bg-neutral-800 dark:border-neutral-700">
             <Link to={`/product/${item.id}`}>
                 <img
-                    className="w-full h-40 sm:h-56 object-contain"
+                    className="w-full h-40 sm:h-56 object-contain hover:scale-105"
                     src={item.images[0]}
                     alt={item.title}
                 />
@@ -38,6 +41,12 @@ const CartWrapper = ({ item }) => {
                     <BsCartPlus className="text-xl text-white" />
                 </button>
             </div>
+            <button
+                onClick={() =>
+                    dispatch({ type: "TOGGLE_WISHLIST", payload: item })
+                }>
+                <FaRegStar className="text-black text-2xl absolute top-7 right-7 dark:hover:text-red-500 hover:text-red-500 active:scale-125 dark:text-white" />
+            </button>
         </li>
     );
 };

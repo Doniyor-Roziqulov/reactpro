@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import logowhite from "../../images/logowhite.svg";
 import logo from "../../images/logo.svg";
 import instagram from "../../images/instagram.svg";
 import { NavLink } from "react-router-dom";
@@ -17,7 +18,12 @@ const Footer = () => {
         <footer className="pt-12 pb-14 bg-slate-50 dark:bg-zinc-800 dark:text-white">
             <div className="container max-w-7xl mx-auto px-3 xl:px-0">
                 <a href="/">
-                    <img src={logo} alt="logo" />
+                    <img className="logo__img" src={logo} alt="logo" />
+                    <img
+                        className="logo__imgwhite"
+                        src={logowhite}
+                        alt="logo"
+                    />
                 </a>
                 <div className="flex flex-wrap justify-between mt-7 gap-3">
                     <div>
