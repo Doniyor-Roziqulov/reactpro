@@ -35,8 +35,8 @@ const Detail = () => {
     return (
         <section className="pt-7 pb-14 dark:bg-zinc-900 dark:text-white">
             <div className="container  max-w-7xl mx-auto px-3 xl:px-0">
-                <div className="flex flex-col items-center justify-between gap-y-3 sm:flex-row sm:items-start gap-x-3">
-                    <div className="w-11/12">
+                <div className="flex flex-col items-center justify-between gap-y-3 sm:flex-row sm:items-start gap-x-3 pb-4">
+                    <div className="w-11/12 ">
                         <div className="sticky top-0 left-0 mb-4">
                             <img
                                 className="w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] object-contain bg-slate-100 dark:bg-neutral-800 border border-slate-300"
